@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Site de tecnologia</title>
+        <%- include('./../common/bootstrap_cdn.ejs') %>
+
+        <!-- Estilo CSS externo -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <%- include('./../common/header.ejs') %>
+
+        <main>
+            <div class="container">
+                <div class="bg-light p-5 rounded mt-4 mb-4">
+                    <h1>Adicionar uma nova Notícia</h1>
+                </div>
+            </div>
+
+            <div class="container">
+                <form action="/noticias/salvar" method="POST">
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Título</label>
+                        <input class="form-control" id="titulo" name="titulo" type="text" placeholder="Título da notícia" required autocomplete="off">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="noticia" class="form-label">Notícia</label>
+                        <textarea class="form-control" name="noticia" id="noticia" cols="30" rows="10" required></textarea>
+                    </div>
+                    <input class="btn btn-primary btn-lg btn-block" type="submit" value="Noticiar">
+                </form>
+            </div>
+
+        </main>
+
+
+        <%- include('./../common/footer.ejs') %>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

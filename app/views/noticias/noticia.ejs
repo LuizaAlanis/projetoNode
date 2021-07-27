@@ -1,0 +1,54 @@
+<%
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: false
+    }
+%>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Site de Tecnologia</title>
+
+        <%- include('./../common/bootstrap_cdn.ejs') %>
+
+        <!-- Estilo CSS externo -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <%- include('./../common/header.ejs') %>
+
+        <main>
+            <div class="container">
+                <div class="card mt-5 shadow">
+                    <div class="card-header">
+                        <h1>Notícia</h1>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <%= noticia.titulo %>
+                        </h4>
+                        <p class="card-text">
+                            <%= noticia.noticia %>
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <%= noticia.data_criacao.toLocaleString('pt-BR', options) %>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <%- include('./../common/footer.ejs') %>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

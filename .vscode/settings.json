@@ -1,0 +1,18 @@
+{
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "ssl": {
+                    "rejectUnauthorized": false
+                }
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "Heroku",
+            "connectString": "postgres://silpmrnvcjqldj:289df1de8f639afd6e58ad17a670dd0db63c034310262365b406b4ba88918cc7@ec2-54-163-97-228.compute-1.amazonaws.com:5432/der8t9vq0ljej8"
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+-- create table noticias(id_noticia serial primary key, titulo varchar(100), noticia text, data_criacao timestamp without time zone default (now() at time zone 'utc+3'))
+-- insert into noticias(titulo, noticia) VALUES ('Banco de dados online', 'Foi realizado a primeira inserção de dados na tabela')
+-- select * from noticias
+-- insert into noticias(titulo, noticia) VALUES ('Testando a página home', 'Teste realizado com sucesso')
