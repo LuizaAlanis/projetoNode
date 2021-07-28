@@ -1,4 +1,5 @@
 const express = require('express')
+const expressSession = require('express-session')
 
 let app = express()
 
@@ -14,6 +15,13 @@ app.use(express.static('./app/views/public'))
 
 // configura o método Post da nossa aplicação
 app.use(express.urlencoded({extended: true}))
+
+// configurar o express-session
+app.use(expressSession({
+    secret: '516658d8cd38e47ffce3a6dbf5704308',
+    resave: false,
+    saveUninitealized: false
+}))
 
 const consign = require('consign')
 

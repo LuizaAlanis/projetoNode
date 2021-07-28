@@ -33,6 +33,44 @@
                     </div>
                     <input class="btn btn-primary btn-lg btn-block" type="submit" value="Noticiar">
                 </form>
+
+                <!-- DIV de Autenticação -->
+                <div>
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel"> Área restrita </h5>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="/autenticar" method="POST">
+                                        <input class="form-control mb-3" name="usuario" type="text" placeholder="Digite o usuário" autocomplete="off" required>
+                                        <input class="form-control mb-3" name="senha" type="password" placeholder="Digite a senha" autocomplete="off" required>
+                                        <button type="submit" class="btn btn-primary">Entrar</button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <% console.log(typeof(autorizado)) %>
+                <% if(typeof(autorizado) === 'undefined'){ %>
+
+                    <script>
+                        $(window).on('load', function(){
+                            $('#staticBackdrop').modal('show')
+                        })
+                    </script>
+
+                <% } %>
+
+
+
+
+                <!-- Fim da Autenticação -->
+
             </div>
 
         </main>

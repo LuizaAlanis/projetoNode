@@ -17,7 +17,18 @@
                      </li>
                  </ul>
              </div>
-             <div><!-- esta div fica sem conteúdo somente fazendo o espaçamento --></div>
+             <div>
+                 <% if(typeof(autorizado) !== 'undefined') { %>
+                    <!-- botão para finalizar a sessão -->
+                    <button id="btn-sair" class="btn btn-outline-light"> Sair </button>
+                    <script>
+                        $('#btn-sair').click(function(){
+                            window.location.href = '/sair'
+                        })
+                    </script>
+                 <% } %>
+
+             </div>
         </div>
     </nav>
 </header>

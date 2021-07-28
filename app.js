@@ -4,6 +4,7 @@
 // npm install ejs
 // npm install consign
 // npm install pg
+// npm install express-session
 
 let app = require('./config/server')
 
@@ -18,7 +19,7 @@ let app = require('./config/server')
 
 // as rotas agora são executadas pelo modulo consign
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log('Servidor rodando com express')
     console.log('Pressione CTRL+C para encerrar')
 })
